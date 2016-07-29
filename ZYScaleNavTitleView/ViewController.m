@@ -8,12 +8,15 @@
 
 #import "ViewController.h"
 
+#import "ZYScaleTitleView.h"
+
 static NSString *resuId  = @"cellId";
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 /**tableView*/
 @property(strong,nonatomic)UITableView *tableView;
+
 @end
 
 @implementation ViewController
@@ -23,9 +26,10 @@ static NSString *resuId  = @"cellId";
 
     [self layoutTabView];
     
+   self.navigationItem.titleView = [[ZYScaleTitleView shareScaleTitleView]
+                                                     initWithTitleViewImageName:@"114"];
     
-
-
+    
 }
 
 #pragma mark - 设置tableView
@@ -58,12 +62,13 @@ static NSString *resuId  = @"cellId";
     return cell;
 
 }
+
 #pragma UIScrollViewDelegate
 /**监听tableView滚动*/
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
 
-
+    [[ZYScaleTitleView shareScaleTitleView] ScaleTitleView:scrollView];
 
 }
 

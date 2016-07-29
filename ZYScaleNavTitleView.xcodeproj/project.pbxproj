@@ -13,6 +13,8 @@
 		045B23021D4AEAAB0009072F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B23001D4AEAAB0009072F /* Main.storyboard */; };
 		045B23041D4AEAAB0009072F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045B23031D4AEAAB0009072F /* Assets.xcassets */; };
 		045B23071D4AEAAB0009072F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B23051D4AEAAB0009072F /* LaunchScreen.storyboard */; };
+		045B23101D4AFE260009072F /* ZYScaleTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B230F1D4AFE260009072F /* ZYScaleTitleView.m */; };
+		045B23121D4B04DA0009072F /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 045B23111D4B04DA0009072F /* 114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		045B23031D4AEAAB0009072F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045B23061D4AEAAB0009072F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B23081D4AEAAB0009072F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045B230E1D4AFE260009072F /* ZYScaleTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYScaleTitleView.h; sourceTree = "<group>"; };
+		045B230F1D4AFE260009072F /* ZYScaleTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYScaleTitleView.m; sourceTree = "<group>"; };
+		045B23111D4B04DA0009072F /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +67,11 @@
 				045B22FB1D4AEAAB0009072F /* AppDelegate.m */,
 				045B22FD1D4AEAAB0009072F /* ViewController.h */,
 				045B22FE1D4AEAAB0009072F /* ViewController.m */,
+				045B230E1D4AFE260009072F /* ZYScaleTitleView.h */,
+				045B230F1D4AFE260009072F /* ZYScaleTitleView.m */,
 				045B23001D4AEAAB0009072F /* Main.storyboard */,
 				045B23031D4AEAAB0009072F /* Assets.xcassets */,
+				045B23111D4B04DA0009072F /* 114.png */,
 				045B23051D4AEAAB0009072F /* LaunchScreen.storyboard */,
 				045B23081D4AEAAB0009072F /* Info.plist */,
 				045B22F71D4AEAAB0009072F /* Supporting Files */,
@@ -137,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045B23121D4B04DA0009072F /* 114.png in Resources */,
 				045B23071D4AEAAB0009072F /* LaunchScreen.storyboard in Resources */,
 				045B23041D4AEAAB0009072F /* Assets.xcassets in Resources */,
 				045B23021D4AEAAB0009072F /* Main.storyboard in Resources */,
@@ -151,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045B22FF1D4AEAAB0009072F /* ViewController.m in Sources */,
+				045B23101D4AFE260009072F /* ZYScaleTitleView.m in Sources */,
 				045B22FC1D4AEAAB0009072F /* AppDelegate.m in Sources */,
 				045B22F91D4AEAAB0009072F /* main.m in Sources */,
 			);
@@ -303,6 +313,7 @@
 				045B230D1D4AEAAB0009072F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
