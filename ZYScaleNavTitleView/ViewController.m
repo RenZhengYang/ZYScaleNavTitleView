@@ -8,20 +8,64 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+static NSString *resuId  = @"cellId";
 
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+/**tableView*/
+@property(strong,nonatomic)UITableView *tableView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [self layoutTabView];
+    
+    
+
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 设置tableView
+- (void)layoutTabView{
+
+    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:_tableView];
+    
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:resuId];
 }
+
+#pragma 数据源方法
+/**返回行*/
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+   return 20;
+}
+
+/**cell的样式*/
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:resuId forIndexPath:indexPath];
+    if (!cell) cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:resuId];
+
+    cell.textLabel.text = @"谦虚学习~热爱生命";
+    return cell;
+
+}
+#pragma UIScrollViewDelegate
+/**监听tableView滚动*/
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+
+
+
+}
+
 
 @end
