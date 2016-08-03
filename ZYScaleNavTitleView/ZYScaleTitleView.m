@@ -16,19 +16,8 @@
 
 @implementation ZYScaleTitleView
 
-+(ZYScaleTitleView * )shareScaleTitleView
-{
-    static ZYScaleTitleView * titleView;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        titleView =  [[self alloc]init];
-    });
-    
-    return titleView;
-}
-
 /**返回初始化一个添加完圆形imageView的对象*/
-- (instancetype)initWithTitleViewImageName:(NSString *)ImgName
+- (ZYScaleTitleView *)initWithTitleViewImageName:(NSString *)ImgName
 {
     self = [super init];
     if (self) {
@@ -48,7 +37,7 @@
     CGFloat offsetY = scrollView.contentOffset.y +scrollView.contentInset.top;
     
     CGFloat scale = 1.0;
-   
+    
     //  放大
     if(offsetY < 0) scale = MIN(1.5, 1- offsetY / 300);
     // 允许下拉放大的最大距离为300

@@ -16,7 +16,7 @@ static NSString *resuId  = @"cellId";
 
 /**tableView*/
 @property(strong,nonatomic)UITableView *tableView;
-
+@property(strong,nonatomic)ZYScaleTitleView *ZYtitleView;
 @end
 
 @implementation ViewController
@@ -26,8 +26,10 @@ static NSString *resuId  = @"cellId";
 
     [self layoutTabView];
     
-   self.navigationItem.titleView = [[ZYScaleTitleView shareScaleTitleView]
-                                                     initWithTitleViewImageName:@"114"];
+    
+    self.ZYtitleView = [[ZYScaleTitleView alloc]initWithTitleViewImageName:@"114"];
+    self.navigationItem.titleView = self.ZYtitleView;
+
     
     
 }
@@ -68,7 +70,8 @@ static NSString *resuId  = @"cellId";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
 
-    [[ZYScaleTitleView shareScaleTitleView] ScaleTitleView:scrollView];
+    [self.ZYtitleView ScaleTitleView:scrollView];
+
 
 }
 
